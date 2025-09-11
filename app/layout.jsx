@@ -1,0 +1,40 @@
+export const metadata = {
+  title: "Islam Mohamed - Frontend",
+  description: "Portfolio_Islam",
+};
+
+import "./globals.css";
+import ParticlesBackground from "./components/ParticlesBackground";
+
+export default function RootLayout({ children }) {
+  return (
+    <html lang="en">
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="anonymous"
+        />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
+          rel="stylesheet"
+        />
+        <link rel="shortcut icon" href="/next.svg" type="image/x-icon" />
+        <script
+          type="module"
+          src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+        />
+        <script
+          noModule
+          src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+        />
+      </head>
+
+      <body className="">
+        <ParticlesBackground />
+        {children}
+      </body>
+    </html>
+  );
+}

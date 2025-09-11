@@ -1,36 +1,121 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Portfolio (Next.js App Router)
 
-## Getting Started
+A personal portfolio built with Next.js (App Router) and React, featuring a sidebar profile, multi-section main content (About, Resume, Portfolio, Blog, Contact), custom filtering, and simple DOM-powered interactions.
 
-First, run the development server:
+### Tech Stack
+
+- **Framework**: Next.js 15 (App Router)
+- **Language**: React 19
+- **Styling**: Custom CSS (`app/globals.css`) + Tailwind CSS (configured via `@tailwindcss/postcss` and `tailwindcss` v4)
+- **Icons**: Ionicons via CDN
+
+### Project Structure
+
+```
+app/
+  components/
+    About.jsx
+    Blog.jsx
+    Contact.jsx
+    MainContent.jsx
+    Navbar.jsx
+    Portfolio.jsx
+    Resume.jsx
+    Sidebar.jsx
+  globals.css
+  layout.jsx
+  page.jsx
+public/
+  images/... (avatars, logos, projects)
+package.json
+next.config.mjs
+```
+
+### Features
+
+- **Sidebar** with avatar, contact info, and social links (`Sidebar.jsx`).
+- **Top navigation + sections**: About, Resume, Portfolio, Blog, Contact (`MainContent.jsx`).
+- **Modal for testimonials**: opens on item click, fills content dynamically.
+- **Custom select and category filter** for portfolio items.
+- **Client-side form button enable/disable** based on validity.
+- **SPA-like page navigation** toggling section visibility.
+
+### Getting Started
+
+1. Install dependencies
+
+```bash
+npm install
+```
+
+2. Run the dev server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Visit `http://localhost:3000`.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+3. Build & start
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+npm start
+```
 
-## Learn More
+### Scripts
 
-To learn more about Next.js, take a look at the following resources:
+- **dev**: `next dev --turbopack`
+- **build**: `next build --turbopack`
+- **start**: `next start`
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Key Files
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- `app/layout.jsx`: Global HTML shell, fonts, favicon, Ionicons, and `globals.css`.
+- `app/page.jsx`: Composes the layout using `Sidebar` and `MainContent`.
+- `app/components/MainContent.jsx`: Handles navbar/sections, testimonials modal, filter/select, form validation, and navigation via a single `useEffect` attaching DOM listeners.
+- `app/components/Sidebar.jsx`: Static profile/contacts/social UI.
 
-## Deploy on Vercel
+### Component Behaviors (MainContent)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **Sidebar toggle**: Button with `[data-sidebar-btn]` toggles `[data-sidebar]` active class.
+- **Testimonials modal**: Clicking `[data-testimonials-item]` populates modal (`[data-modal-img]`, `[data-modal-title]`, `[data-modal-text]`) and toggles `[data-modal-container]`/`[data-overlay]`.
+- **Custom select + filter**: `[data-select]` opens a list; clicking `[data-select-item]` updates `[data-selecct-value]` and filters `[data-filter-item]` by `data-category`. Filter buttons `[data-filter-btn]` mirror this behavior.
+- **Form validation**: Inputs `[data-form-input]` enable/disable `[data-form-btn]` based on `[data-form]` validity.
+- **Navigation**: Links `[data-nav-link]` show/hide `[data-page]` sections by matching `data-page` value and manage `active` classes.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Styling
+
+- Global styles in `app/globals.css`. Tailwind v4 is available via PostCSS plugins if you prefer utility classes. Keep class names and `active` toggling in sync when modifying UI states.
+
+### Customization
+
+- Update profile data, contacts, and social links in `Sidebar.jsx`.
+- Adjust section content in `About.jsx`, `Resume.jsx`, `Portfolio.jsx`, `Blog.jsx`, `Contact.jsx`.
+- Replace images under `public/images` and update paths as needed.
+- Modify selectors or behaviors in `MainContent.jsx` if changing DOM structure (ensure matching `data-*` attributes).
+
+### Accessibility & SEO
+
+- Provide descriptive `alt` attributes for images.
+- Ensure interactive elements are focusable and keyboard operable if extending interactions beyond click.
+- Metadata is set in `app/layout.jsx` via the `metadata` export; customize title/description.
+
+### Deployment
+
+- Any Node-compatible host works. Vercel is recommended for Next.js.
+
+```bash
+npm run build
+npm start
+```
+
+- Set `NEXT_TELEMETRY_DISABLED=1` if needed for CI.
+
+### Notes
+
+- The project currently manages interactions via direct DOM queries and event listeners inside `useEffect`. If you migrate to more idiomatic React state, mirror existing behavior (class toggles and selectors) to avoid regressions.
+
+---
+
+Maintained by: You. Feel free to adapt sections to match your personal brand and content.
