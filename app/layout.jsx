@@ -5,6 +5,7 @@ export const metadata = {
 
 import "./globals.css";
 import ParticlesBackground from "./components/ParticlesBackground";
+import AppLoader from "./components/AppLoader";
 
 export default function RootLayout({ children }) {
   return (
@@ -32,6 +33,7 @@ export default function RootLayout({ children }) {
       </head>
 
       <body className="">
+        <AppLoader />
         <ParticlesBackground />
         {children}
       </body>

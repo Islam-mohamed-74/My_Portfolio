@@ -330,7 +330,7 @@ export default function Portfolio() {
                       onError={(e) => {
                         e.currentTarget.src = `https://picsum.photos/seed/${p.img}/600/400`;
                       }}
-                      loading="lazy"
+                      // loading="lazy"
                     />
                   </figure>
                 </a>
