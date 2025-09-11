@@ -187,6 +187,8 @@ export default function Portfolio() {
 
   // وظيفة تغيير الفلتر
   const handleFilterChange = (category) => {
+    console.log("hi");
+
     setActiveFilter(category);
     setDropdownOpen(false);
   };
@@ -248,20 +250,21 @@ export default function Portfolio() {
         </ul>
 
         {/* 🔹 Filter Dropdown */}
-        <div className="relative mb-[25px] md:hidden">
+        <div className="filter-select-box relative mb-[25px] md:hidden">
           <button
-            className={`bg-[var(--eerie-black-2)] text-[14px] text-[var(--light-gray)] flex justify-between items-center w-full p-[12px_16px] border border-[var(--jet)] rounded-[14px] font-[var(--fw-300)] ${
-              dropdownOpen ? "after:rotate-180" : ""
-            }`}
+            className={`bg-[var(--eerie-black-2)] text-[14px] text-[var(--light-gray)] flex justify-between items-center w-full p-[12px_16px] border border-[var(--jet)] rounded-[14px] font-[var(--fw-300)]`}
             onClick={() => setDropdownOpen(!dropdownOpen)}
           >
-            <div className="select-value" data-selecct-value>
-              {activeFilter}
-            </div>
-            <div className="select-icon transition-transform">
+            <div className="select-value">{activeFilter}</div>
+            <div
+              className={`select-icon transition-transform ${
+                dropdownOpen ? "rotate-180" : ""
+              }`}
+            >
               <ion-icon name="chevron-down"></ion-icon>
             </div>
           </button>
+
           <ul
             className={`absolute top-[calc(100%+6px)] w-full p-[6px] border border-[var(--jet)] rounded-[14px] z-[2] transition-[0.15s_ease-in-out] ${
               dropdownOpen
@@ -327,10 +330,7 @@ export default function Portfolio() {
                       }
                       alt={p.title}
                       className="h-full w-full rounded-[16px]  object-contain transition-[var(--transition-1)] group-hover:scale-110"
-                      onError={(e) => {
-                        e.currentTarget.src = `https://picsum.photos/seed/${p.img}/600/400`;
-                      }}
-                      // loading="lazy"
+                      loading="lazy"
                     />
                   </figure>
                 </a>
