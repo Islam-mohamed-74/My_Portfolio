@@ -81,6 +81,7 @@ Works well on Vercel. Ensure static assets exist in `public/`.
 
 - LinkedIn: https://www.linkedin.com/in/islam-mohamed-038240210/
 - GitHub: https://github.com/Islam-mohamed-74
+- Live demo : https://my-portfolio-six-eta-82.vercel.app/
 
 ---
 
