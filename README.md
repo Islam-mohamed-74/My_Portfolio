@@ -2,7 +2,7 @@
 
 A modern portfolio built with Next.js (App Router) and Tailwind CSS. Includes About, Resume, Portfolio, and Contact sections. The Blog tab is disabled and labeled “Soon”.
 
-![preview](./public/image.jpg)
+![preview](./image.jpg)
 
 ## ✨ Features
 
