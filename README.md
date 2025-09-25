@@ -2,6 +2,8 @@
 
 A modern portfolio built with Next.js (App Router) and Tailwind CSS. Features dynamic GitHub project integration, custom loading animations, and manual project ordering system.
 
+![preview](./image.jpg)
+
 ## ✨ Features
 
 - **Dynamic GitHub Integration**: Automatically fetches and displays GitHub repositories
