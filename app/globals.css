@@ -1,5 +1,15 @@
 @import "tailwindcss";
 
+/* Shine animation for category buttons */
+@keyframes shine {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
 :root {
   /**
      * colors

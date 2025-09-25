@@ -9,7 +9,7 @@ import AppLoader from "./components/AppLoader";
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" className="hydrated">
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
