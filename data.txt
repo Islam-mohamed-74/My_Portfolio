@@ -4,7 +4,7 @@
       img: 1,
       title: "ITIANS",
       cat: "Next.js",
-      stack: [{ name: "next" }, { name: "firebase" }],
+      stack: [{ name: "next" }, { name: "firebase" },{name:"Next.js API"},{name:"Cloudinary",{name:" Context API"}}],
       live: "https://itians-oye3y6e3b-wafaa-samirs-projects.vercel.app/login",
       Github: "https://github.com/ITI-Graduation-2025/ITIANS",
     {

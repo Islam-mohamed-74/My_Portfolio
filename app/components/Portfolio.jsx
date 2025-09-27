@@ -59,17 +59,44 @@ export default function Portfolio() {
     "My-Portfolio",
     "Islam-mohamed-74",
     "Tailwind-Games",
+    // Static projects (ITIANS) are NOT excluded - they will appear in portfolio
   ];
 
   const { projects, loading, error } = useFetchProjects(mapGithubRepos);
 
+  // Static projects (manually added)
+  const staticProjects = [
+    {
+      num: "01",
+      img: "/images/project-photo/1.png",
+      title: "ITIANS",
+      cat: "Next.js",
+      description:
+        "ITIANS is a full‑stack Next.js platform that connects graduates, mentors, and companies. It provides role‑based dashboards, real‑time chat, job postings and applications, profile management with file uploads, analytics, and push notifications.",
+      updated: "2025-08-20T00:00:00Z",
+      stack: [
+        { name: "Next.js" },
+        { name: "Firebase" },
+        { name: "shadcn" },
+        { name: "Cloudinary" },
+      ],
+      live: "https://itians-oye3y6e3b-wafaa-samirs-projects.vercel.app/login",
+      Github: "https://github.com/ITI-Graduation-2025/ITIANS",
+    },
+  ];
+
   // Memoized excluded projects to prevent recalculation
   const excludedProjectsSet = useMemo(() => new Set(excludedProjects), []);
 
+  // Combine static projects with GitHub projects
+  const allProjects = useMemo(() => {
+    return [...staticProjects, ...projects];
+  }, [staticProjects, projects]);
+
   // Memoized withoutExcluded
   const withoutExcluded = useMemo(
-    () => projects.filter((p) => !excludedProjectsSet.has(p.title)),
-    [projects, excludedProjectsSet]
+    () => allProjects.filter((p) => !excludedProjectsSet.has(p.title)),
+    [allProjects, excludedProjectsSet]
   );
 
   // Dynamic categories based on actual project data
@@ -90,12 +117,14 @@ export default function Portfolio() {
   const priorityProjects = [
     "My_Portfolio", // Your main portfolio project
     "PWA", // Progressive Web App
+    "ITIANS", // ITIANS project - always position 3
   ];
 
   // Manual order for other projects (in order of preference)
   const manualOrder = [
     "Anime",
     "project_promptopia",
+    "ITIANS",
     "Car_ShowCase",
     "React-blog",
     "React-blog-mui",
