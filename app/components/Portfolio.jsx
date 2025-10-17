@@ -122,6 +122,7 @@ export default function Portfolio() {
 
   // Manual order for other projects (in order of preference)
   const manualOrder = [
+    "Instagram-Clone",
     "Anime",
     "project_promptopia",
     "ITIANS",
