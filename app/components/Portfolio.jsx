@@ -124,6 +124,7 @@ export default function Portfolio() {
   const manualOrder = [
     "Instagram-Clone",
     "Anime",
+    "Shadcn-UI",
     "project_promptopia",
     "ITIANS",
     "Car_ShowCase",
@@ -211,7 +212,7 @@ export default function Portfolio() {
 
       <section className="projects ">
         {loading && (
-          <div className="">
+          <div className="  ">
             <Loader />
           </div>
         )}
