@@ -201,7 +201,7 @@ export default function Portfolio() {
 
   return (
     <article
-      className="bg-[var(--eerie-black-2)] active border border-[var(--jet)] relative rounded-[20px] p-[15px] shadow-[var(--shadow-1)] z-[1] block"
+      className="bg-[var(--eerie-black-2)] min-h-60  active border border-[var(--jet)] relative rounded-[20px] p-[15px] shadow-[var(--shadow-1)] z-[1] block"
       data-page="portfolio"
     >
       <header>

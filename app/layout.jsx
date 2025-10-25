@@ -32,7 +32,11 @@ export default function RootLayout({ children }) {
         />
       </head>
 
-      <body className="">
+      <body
+        className={` ${
+          process.env.NODE_ENV === "development" ? "debug-screens" : ""
+        }`}
+      >
         <AppLoader />
         <ParticlesBackground />
         {children}

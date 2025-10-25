@@ -4,7 +4,7 @@ import styled from "styled-components";
 const Loader = () => {
   return (
     <StyledWrapper>
-      <div className="card absolute top-1/2 left-1/2  transform -translate-x-1/2 -translate-y-1/2">
+      <div className="card absolute xl:top-1/2 xl:left-1/2 transform -translate-x-1/2 -translate-y-1/2 top-40 left-1/2 max-lg:!p-0  md:top-44">
         <div className="loader">
           <p>loading</p>
           <div className="words">
@@ -24,7 +24,7 @@ const StyledWrapper = styled.div`
   .card {
     /* color used to softly clip top and bottom of the .words container */
     --bg-color: #111;
-    background-color: #1e1e1f;
+    // background-color: #1e1e1f;
     padding: 1rem 2rem;
     border-radius: 1.25rem;
   }

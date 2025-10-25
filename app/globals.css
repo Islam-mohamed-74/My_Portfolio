@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@plugin "tailwindcss-debug-screens";
 
 /* Shine animation for category buttons */
 @keyframes shine {
