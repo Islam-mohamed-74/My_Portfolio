@@ -21,7 +21,11 @@ export default function RootLayout({ children }) {
           href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
           rel="stylesheet"
         />
-        <link rel="shortcut icon" href="/next.svg" type="image/x-icon" />
+        <link
+          rel="shortcut icon"
+          href="/images/Islam.jpg"
+          type="image/x-icon"
+        />
         <script
           type="module"
           src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"

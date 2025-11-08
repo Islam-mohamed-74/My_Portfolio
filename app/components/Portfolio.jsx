@@ -124,6 +124,7 @@ export default function Portfolio() {
   const manualOrder = [
     "Instagram-Clone",
     "Apple-iPhone",
+    "small-ecommerce-ui-sandbox",
     "Shadcn-UI",
     "Anime",
     "project_promptopia",
