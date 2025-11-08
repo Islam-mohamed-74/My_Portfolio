@@ -157,36 +157,6 @@ export default function Resume() {
                 </span>
               </div>
 
-              {/* MongoDB */}
-              <div className="flex flex-col items-center group cursor-pointer">
-                <div className="w-[50px] h-[50px] bg-gradient-to-br from-green-600 to-green-700 rounded-[12px] flex items-center justify-center text-white text-[16px] font-bold mb-[8px] group-hover:scale-110 transition-transform duration-300">
-                  M
-                </div>
-                <span className="text-[12px] text-[var(--light-gray)] text-center">
-                  MongoDB
-                </span>
-              </div>
-
-              {/* Firebase */}
-              <div className="flex flex-col items-center group cursor-pointer">
-                <div className="w-[50px] h-[50px] bg-gradient-to-br from-yellow-500 to-orange-500 rounded-[12px] flex items-center justify-center text-white text-[16px] font-bold mb-[8px] group-hover:scale-110 transition-transform duration-300">
-                  F
-                </div>
-                <span className="text-[12px] text-[var(--light-gray)] text-center">
-                  Firebase
-                </span>
-              </div>
-
-              {/* Vite */}
-              <div className="flex flex-col items-center group cursor-pointer">
-                <div className="w-[50px] h-[50px] bg-gradient-to-br from-purple-600 to-purple-700 rounded-[12px] flex items-center justify-center text-white text-[16px] font-bold mb-[8px] group-hover:scale-110 transition-transform duration-300">
-                  V
-                </div>
-                <span className="text-[12px] text-[var(--light-gray)] text-center">
-                  Vite
-                </span>
-              </div>
-
               {/* Material UI */}
               <div className="flex flex-col items-center group cursor-pointer">
                 <div className="w-[50px] h-[50px] bg-gradient-to-br from-blue-500 to-blue-600 rounded-[12px] flex items-center justify-center text-white text-[16px] font-bold mb-[8px] group-hover:scale-110 transition-transform duration-300">
@@ -204,6 +174,17 @@ export default function Resume() {
                 </div>
                 <span className="text-[12px] text-[var(--light-gray)] text-center">
                   Redux
+                </span>
+              </div>
+
+              {/* zustand  */}
+
+              <div className="flex flex-col items-center group cursor-pointer">
+                <div className="w-[50px] h-[50px] bg-gradient-to-br from-purple-500 to-purple-600 rounded-[12px] flex items-center justify-center text-white text-[16px] font-bold mb-[8px] group-hover:scale-110 transition-transform duration-300">
+                  Z
+                </div>
+                <span className="text-[12px] text-[var(--light-gray)] text-center">
+                  zustand
                 </span>
               </div>
 
@@ -306,6 +287,27 @@ export default function Resume() {
                 </div>
                 <span className="text-[12px] text-[var(--light-gray)] text-center">
                   Node.js
+                </span>
+              </div>
+
+              {/* Firebase */}
+              <div className="flex flex-col items-center group cursor-pointer">
+                <div className="w-[50px] h-[50px] bg-gradient-to-br from-yellow-500 to-orange-500 rounded-[12px] flex items-center justify-center text-white text-[16px] font-bold mb-[8px] group-hover:scale-110 transition-transform duration-300">
+                  F
+                </div>
+                <span className="text-[12px] text-[var(--light-gray)] text-center">
+                  Firebase
+                </span>
+              </div>
+
+              {/* Appwrite */}
+
+              <div className="flex flex-col items-center group cursor-pointer">
+                <div className="w-[50px] h-[50px] bg-gradient-to-br from-gray-600 to-gray-700 rounded-[12px] flex items-center justify-center text-white text-[16px] font-bold mb-[8px] group-hover:scale-110 transition-transform duration-300">
+                  A
+                </div>
+                <span className="text-[12px] text-[var(--light-gray)] text-center">
+                  Appwrite
                 </span>
               </div>
 
